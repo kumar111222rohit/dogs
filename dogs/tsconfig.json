@@ -12,6 +12,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noImplicitThis": false,
     "plugins": [
       {
         "name": "next"
@@ -21,6 +22,15 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/utils/debounce.js",
+    "src/app/utils/tooltip.js",
+    "jest.setup.js",
+    "src/pages"
+  ],
   "exclude": ["node_modules"]
 }
