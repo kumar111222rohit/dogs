@@ -41,12 +41,12 @@ export const RandomDogs: React.FC<Props> = ({ dogsData }) => {
             imageSrc={randomDogsData as string}
           />
         )}
-        <Button
-          btnLabel={t('generateRandomImage')}
-          ariaLabel="show more dogs button"
-          onClick={handleClick}
-        />
       </div>
+      <Button
+        btnLabel={t('generateRandomImage')}
+        ariaLabel="show more dogs button"
+        onClick={handleClick}
+      />
     </>
   );
 };
