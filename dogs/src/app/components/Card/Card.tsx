@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
-import "./Card.css";
-import { Tooltip } from "../Tooltip/Tooltip";
+import './Card.css';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 interface Props {
   labelText: string;

@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import Link from 'next/link';
 
-import { Button } from "./components/Button/Button";
-import { Header } from "./components/Header/Header";
+import { Button } from './components/Button/Button';
+import { Header } from './components/Header/Header';
 
-import "./globals.css";
-import { useTranslation } from "react-i18next";
+import './globals.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ export default function Home() {
       />
       <Link href="/dogs">
         <div className="home-page-btn">
-          <Button btnLabel={t("clickToViewAssignment")} />
+          <Button btnLabel={t('clickToViewAssignment')} />
         </div>
       </Link>
     </>

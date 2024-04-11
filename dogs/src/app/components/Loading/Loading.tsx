@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Loading.css";
+import React, { useState } from 'react';
+import './Loading.css';
 
 interface Props {
   loaderImageCount?: number;
@@ -18,7 +18,7 @@ const LoadingImage: React.FC<Props> = ({ loaderImageCount = 3 }) => {
         <>
           <div className="loader-wrapper">{shimmerElements}</div>
           <img
-            style={{ display: imageLoaded ? "block" : "none" }}
+            style={{ display: imageLoaded ? 'block' : 'none' }}
             onLoad={() => setImageLoaded(true)}
             width="100%"
             height="250"

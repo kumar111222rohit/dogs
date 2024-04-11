@@ -1,7 +1,6 @@
 {
-    "noDogsFound": "Hoppla! Keine Hunde für die Rasse gefunden.",
-    "showMore": "Mehr anzeigen",
-    "generateRandomImage": "Zufälliges Hunde-Bild generieren",
-    "clickToViewAssignment": "Klicken, um die Aufgabe anzuzeigen"
-  }
-  
+  "noDogsFound": "Hoppla! Keine Hunde für die Rasse gefunden.",
+  "showMore": "Mehr anzeigen",
+  "generateRandomImage": "Zufälliges Hunde-Bild generieren",
+  "clickToViewAssignment": "Klicken, um die Aufgabe anzuzeigen"
+}

@@ -1,7 +1,6 @@
 {
-    "noDogsFound": "Oeps! Geen honden gevonden voor het ras.",
-    "showMore": "Meer weergeven",
-    "generateRandomImage": "Genereer willekeurige hondenafbeelding",
-    "clickToViewAssignment": "Klik om de opdracht te bekijken"
-  }
-  
+  "noDogsFound": "Oeps! Geen honden gevonden voor het ras.",
+  "showMore": "Meer weergeven",
+  "generateRandomImage": "Genereer willekeurige hondenafbeelding",
+  "clickToViewAssignment": "Klik om de opdracht te bekijken"
+}

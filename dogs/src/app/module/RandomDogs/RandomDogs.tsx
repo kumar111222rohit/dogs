@@ -1,16 +1,16 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Dogs } from "@/app/types/dogs";
-import { Card } from "@/app/components/Card/Card";
-import { getBreedName } from "@/app/utils/helper";
-import { Button } from "@/app/components/Button/Button";
-import { fetchDogsData } from "@/app/hooks/fetchDogsData";
-import LoadingImage from "@/app/components/Loading/Loading";
-import { debounce } from "@/app/utils/debounce";
-import { DELAY } from "@/app/constants/genericConstants";
+import { Dogs } from '@/app/types/dogs';
+import { Card } from '@/app/components/Card/Card';
+import { getBreedName } from '@/app/utils/helper';
+import { Button } from '@/app/components/Button/Button';
+import { fetchDogsData } from '@/app/hooks/fetchDogsData';
+import LoadingImage from '@/app/components/Loading/Loading';
+import { debounce } from '@/app/utils/debounce';
+import { DELAY } from '@/app/constants/genericConstants';
 
-import "./RandomDogs.css";
+import './RandomDogs.css';
 
 interface Props {
   dogsData: Dogs;
@@ -42,7 +42,7 @@ export const RandomDogs: React.FC<Props> = ({ dogsData }) => {
           />
         )}
         <Button
-          btnLabel={t("generateRandomImage")}
+          btnLabel={t('generateRandomImage')}
           ariaLabel="show more dogs button"
           onClick={handleClick}
         />

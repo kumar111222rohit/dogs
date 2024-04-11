@@ -1,17 +1,17 @@
-"use client";
-import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+'use client';
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Card } from "@/app/components/Card/Card";
-import { getBreedName } from "@/app/utils/helper";
-import { fetchDogsData } from "@/app/hooks/fetchDogsData";
-import { Dogs } from "@/app/types/dogs";
-import { Button } from "@/app/components/Button/Button";
-import LoadingImage from "@/app/components/Loading/Loading";
+import { Card } from '@/app/components/Card/Card';
+import { getBreedName } from '@/app/utils/helper';
+import { fetchDogsData } from '@/app/hooks/fetchDogsData';
+import { Dogs } from '@/app/types/dogs';
+import { Button } from '@/app/components/Button/Button';
+import LoadingImage from '@/app/components/Loading/Loading';
 
-import "./BreedDogs.css";
-import { debounce } from "@/app/utils/debounce";
-import { DELAY } from "@/app/constants/genericConstants";
+import './BreedDogs.css';
+import { debounce } from '@/app/utils/debounce';
+import { DELAY } from '@/app/constants/genericConstants';
 
 interface Props {
   dogBreed: string;
@@ -43,7 +43,7 @@ export const BreedDogs: React.FC<Props> = ({ dogBreed }) => {
   const getData = async () => {
     setIsLoading(true);
     const data = await fetchDogsByBreed(dogBreed);
-    setDogsData((dogsData) => [...dogsData, ...data]);
+    setDogsData(dogsData => [...dogsData, ...data]);
     setIsLoading(false);
   };
 
@@ -59,14 +59,14 @@ export const BreedDogs: React.FC<Props> = ({ dogBreed }) => {
             <div className="dogs-container">{renderDogs(dogsData)}</div>
             <div>
               <Button
-                btnLabel={t("showMore")}
+                btnLabel={t('showMore')}
                 ariaLabel="show more dogs button"
                 onClick={handleClick}
               />
             </div>
           </>
         ) : (
-          <div className="not-found">{t("noDogsFound")}</div>
+          <div className="not-found">{t('noDogsFound')}</div>
         )}
         {isLoading && <LoadingImage />}
       </div>

@@ -1,5 +1,5 @@
-import { getDogsByBreed, getRandomDogs } from "../services/apiService";
-import { toast } from "react-toastify";
+import { getDogsByBreed, getRandomDogs } from '../services/apiService';
+import { toast } from 'react-toastify';
 
 export const fetchDogsData = () => {
   const fetchDogsByBreed = async (breed: string) => {
@@ -10,7 +10,7 @@ export const fetchDogsData = () => {
       }
       return [];
     } catch (err) {
-      toast.error("Error in fetching dog data");
+      toast.error('Error in fetching dog data');
     }
   };
 
@@ -22,7 +22,7 @@ export const fetchDogsData = () => {
       }
       return [];
     } catch (err) {
-      toast.error("Error in fetching dog data");
+      toast.error('Error in fetching dog data');
     }
   };
 

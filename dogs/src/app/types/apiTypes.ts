@@ -1,5 +1,5 @@
 // API types
-export type RequestMethod = "GET" | "POST" | "PUT" | "DELETE" | "OPTIONS";
+export type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS';
 
 export interface RequestOptions {
   method: RequestMethod;

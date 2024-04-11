@@ -1,7 +1,6 @@
 {
-    "noDogsFound": "Oups ! Aucun chien trouvé pour la race.",
-    "showMore": "Afficher plus",
-    "generateRandomImage": "Générer une image aléatoire de chien",
-    "clickToViewAssignment": "Cliquez pour voir l'assignation"
-  }
-  
+  "noDogsFound": "Oups ! Aucun chien trouvé pour la race.",
+  "showMore": "Afficher plus",
+  "generateRandomImage": "Générer une image aléatoire de chien",
+  "clickToViewAssignment": "Cliquez pour voir l'assignation"
+}

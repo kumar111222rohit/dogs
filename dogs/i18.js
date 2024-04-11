@@ -1,11 +1,11 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-import translationEN from "./public/locales/en/common.json";
-import translationES from "./public/locales/en/common.json";
-import translationDE from "./public/locales/en/common.json";
-import translationNL from "./public/locales/en/common.json";
-import translationFR from "./public/locales/en/common.json";
+import translationEN from './public/locales/en/common.json';
+import translationES from './public/locales/en/common.json';
+import translationDE from './public/locales/en/common.json';
+import translationNL from './public/locales/en/common.json';
+import translationFR from './public/locales/en/common.json';
 
 const resources = {
   en: {
@@ -27,7 +27,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: 'en',
   keySeparator: false,
   interpolation: {
     escapeValue: false,
