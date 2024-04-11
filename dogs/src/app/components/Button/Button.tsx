@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import './Button.css';
 
@@ -15,15 +14,14 @@ interface Props {
 export const Button: React.FC<Props> = ({
   onClick,
   btnLabel,
-  type,
+  type = 'submit',
   disabled,
-  customClass = '',
   ariaLabel = '',
   dataTestId,
 }) => {
   return (
     <button
-      className={classNames('submit-button', customClass)}
+      className="submit-button"
       onClick={onClick}
       type={type}
       disabled={disabled}

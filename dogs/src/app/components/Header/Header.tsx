@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
-import classNames from 'classnames';
 
 import './Header.css';
 import { Tooltip } from '../Tooltip/Tooltip';
@@ -11,7 +10,6 @@ interface Props {
   tooltipText?: string;
   imgSrc?: string;
   altText?: string;
-  customClass?: string;
 }
 export const Header: React.FC<Props> = ({
   headerText,
@@ -19,10 +17,9 @@ export const Header: React.FC<Props> = ({
   tooltipText,
   imgSrc,
   altText,
-  customClass = '',
 }) => {
   return (
-    <div className={classNames('header-container', customClass)}>
+    <div className="header-container">
       {imgSrc && (
         <Image
           src={imgSrc}
