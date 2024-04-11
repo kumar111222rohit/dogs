@@ -1,4 +1,6 @@
 {
-    "Cute and lovely dogs":"Cute and lovely dogs"
-
+  "noDogsFound": "Oops! No dogs found for the breed.",
+  "showMore": "Show more",
+  "generateRandomImage": "Generate random dog image",
+  "clickToViewAssignment": "Click to view assignment"
 }
