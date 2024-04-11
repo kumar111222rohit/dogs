@@ -8,10 +8,10 @@ import { fetchDogsData } from '@/app/hooks/fetchDogsData';
 import { Dogs } from '@/app/types/dogs';
 import { Button } from '@/app/components/Button/Button';
 import LoadingImage from '@/app/components/Loading/Loading';
-
-import './BreedDogs.css';
 import { debounce } from '@/app/utils/debounce';
 import { DELAY } from '@/app/constants/genericConstants';
+
+import './BreedDogs.css';
 
 interface Props {
   dogBreed: string;
@@ -40,6 +40,7 @@ export const BreedDogs: React.FC<Props> = ({ dogBreed }) => {
   const handleClick = debounce(() => {
     getData();
   }, DELAY);
+
   const getData = async () => {
     setIsLoading(true);
     const data = await fetchDogsByBreed(dogBreed);
@@ -54,7 +55,7 @@ export const BreedDogs: React.FC<Props> = ({ dogBreed }) => {
     <>
       <div className="dogs-wrapper">
         <div className="header-text">{dogBreed}</div>
-        {dogsData && dogsData.length ? (
+        {dogsData.length ? (
           <>
             <div className="dogs-container">{renderDogs(dogsData)}</div>
             <div>
