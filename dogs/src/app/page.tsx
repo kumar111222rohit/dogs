@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { Button } from './components/Button/Button';
-import './globals.css';
-import { Header } from './components/Header/Header';
+"use client";
+import React from "react";
+import Link from "next/link";
+import { Button } from "./components/Button/Button";
+import "./globals.css";
+import { Header } from "./components/Header/Header";
 
 export default function Home() {
   return (

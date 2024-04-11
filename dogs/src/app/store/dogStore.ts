@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import dogReducer from './dogReducer';
-import { useDispatch } from 'react-redux';
+import { configureStore } from "@reduxjs/toolkit";
+import dogReducer from "./dogReducer";
+import { useDispatch } from "react-redux";
 
 export const dogStore = configureStore({
   reducer: {

@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './Tooltip.css';
+import React, { useState, useRef, useEffect } from "react";
+import "./Tooltip.css";
 
 interface TooltipProps {
   children: React.ReactNode;

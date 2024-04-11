@@ -1,34 +1,30 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {  Dogs } from '../types/dogs';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Dogs, DogsResponse } from "../types/dogs";
 
 export interface TableState {
   loading: boolean;
-  data: Dogs[];
-
+  message: Dogs[];
 }
 
 export const initialState: TableState = {
   loading: false,
-  data: [],
- 
+  message: [],
 };
 
 export const dogSlice = createSlice({
-  name: 'dogs',
+  name: "dogs",
   initialState,
   reducers: {
-    
-    setRandomDog: (state, action: PayloadAction<any[]>) => {
-      state.data = action.payload;
+    addDogs: (state, action: PayloadAction<Dogs[]>) => {
+      console.log(action.payload);
+      state.message = [...state.message, ...action.payload];
     },
-    
-   
+    setLoader: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload;
+    },
   },
 });
 
-export const {
-  setRandomDog,
-
-} = dogSlice.actions;
+export const { addDogs, setLoader } = dogSlice.actions;
 
 export default dogSlice.reducer;

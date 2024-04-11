@@ -1,23 +1,16 @@
-
 export function generateErrorResponse(message: string): {
-  status: 'error';
+  status: "error";
   message: string;
 } {
   return {
-    status: 'error',
+    status: "error",
     message,
   };
 }
 
-export function getBreedName(url:string){
-  const parts = url.split('/');
-  const breedIndex = parts.indexOf('breeds') + 1;
+export function getBreedName(url: string) {
+  const parts = url.split("/");
+  const breedIndex = parts.indexOf("breeds") + 1;
 
   return parts[breedIndex];
 }
-
-
-
-
-
-

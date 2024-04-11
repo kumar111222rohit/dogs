@@ -1,23 +1,25 @@
-import { useQuery } from '@tanstack/react-query';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
-import { setRandomDog } from '../store/dogReducer';
-import { getDogsByBreed } from '../services/apiService';
+import { addDogs, setLoader } from "../store/dogReducer";
+import { getDogsByBreed } from "../services/apiService";
 
-export const useDogsByBreed = (breed:string) => {
+export const useDogsByBreed = (breed: string) => {
   const dispatch = useDispatch();
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['getDogsByBreed'],
-    queryFn: ()=>getDogsByBreed(breed),
-  });
 
-  // dispatch(setRandomDog(data));
-  // here returning for our Charger Dashboard component,
-  // we can also access from the redux store in the component
+  const loadData = async () => {
+    dispatch(setLoader(true));
+    const data = await getDogsByBreed(breed);
+    if (data.message) {
+      // dispatch(addDogs(data.message));
+      setTimeout(() => {
+        dispatch(setLoader(false));
+      }, 2000);
+      return data.message
+    }
+    dispatch(setLoader(false));
+  };
+
   return {
-    dogsByBreedData: data,
-    dogsByBreedDataLoading: isLoading,
-    dogsByBreedDataIsError: isError,
-    dogsByBreedDataError: error,
+    loadData,
   };
 };

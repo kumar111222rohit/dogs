@@ -1,12 +1,12 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-import './Button.css';
+import "./Button.css";
 
 interface Props {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   btnLabel: string;
-  type?: 'submit' | 'button';
+  type?: "submit" | "button";
   disabled?: boolean;
   customClass?: string;
   ariaLabel?: string;
@@ -17,13 +17,13 @@ export const Button: React.FC<Props> = ({
   btnLabel,
   type,
   disabled,
-  customClass = '',
-  ariaLabel = '',
+  customClass = "",
+  ariaLabel = "",
   dataTestId,
 }) => {
   return (
     <button
-      className={classNames('submit-button', customClass)}
+      className={classNames("submit-button", customClass)}
       onClick={onClick}
       type={type}
       disabled={disabled}

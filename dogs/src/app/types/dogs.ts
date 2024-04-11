@@ -1,8 +1,7 @@
 //dogs
-export type Dogs=
-{
-  message: string | string[],
-  status: string
-}
+export type DogsResponse = {
+  message: Dogs;
+  status: string;
+};
 
-
+export type Dogs = string | string[];

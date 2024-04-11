@@ -1,0 +1,23 @@
+.dogs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+.dogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header-text {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: darkmagenta;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.not-found {
+  color: red;
+  font-weight: 600;
+}
