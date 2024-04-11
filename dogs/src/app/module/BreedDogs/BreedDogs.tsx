@@ -21,9 +21,9 @@ const renderDogs = (message: Dogs[]) => {
   // the message received from API can be a string or string []
   // so parsing it accordingly and adding in the UI
   if (Array.isArray(message)) {
-    return message.map((dog, index) => (
+    return message.map(dog => (
       <Card
-        key={index}
+        key={dog as string} // since our dog url is the only unique thing we have currently
         labelText={getBreedName(dog as string)}
         imageSrc={dog as string}
       />
