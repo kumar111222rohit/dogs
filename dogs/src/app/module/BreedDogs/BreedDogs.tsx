@@ -18,6 +18,8 @@ interface Props {
 }
 
 const renderDogs = (message: Dogs[]) => {
+  // the message received from API can be a string or string []
+  // so parsing it accordingly and adding in the UI
   if (Array.isArray(message)) {
     return message.map((dog, index) => (
       <Card
