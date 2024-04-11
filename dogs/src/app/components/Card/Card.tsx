@@ -11,16 +11,16 @@ interface Props {
 export const Card: React.FC<Props> = ({ labelText, imageSrc }) => {
   return (
     <>
-      <div className="card-wrapper">
-        <div className="card-content">
+      <article className="card-wrapper">
+        <section className="card-content">
           <Image src={imageSrc} width={250} height={250} alt={labelText} />
-        </div>
+        </section>
         <Tooltip text={`Dog breed is ${labelText}`}>
-          <div className="card-label" aria-label={`${labelText}`}>
+          <section className="card-label" aria-label={`${labelText}`}>
             {labelText}
-          </div>
+          </section>
         </Tooltip>
-      </div>
+      </article>
     </>
   );
 };

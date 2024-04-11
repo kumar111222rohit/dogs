@@ -13,7 +13,7 @@ const LoadingImage: React.FC<Props> = ({ loaderImageCount = 3 }) => {
   }
 
   return (
-    <div>
+    <section>
       {!imageLoaded && (
         <>
           <div className="loader-wrapper">{shimmerElements}</div>
@@ -25,7 +25,7 @@ const LoadingImage: React.FC<Props> = ({ loaderImageCount = 3 }) => {
           />
         </>
       )}
-    </div>
+    </section>
   );
 };
 

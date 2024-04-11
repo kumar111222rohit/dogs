@@ -32,7 +32,7 @@ export const RandomDogs: React.FC<Props> = ({ dogsData }) => {
 
   return (
     <>
-      <div className="wrapper">
+      <article className="wrapper">
         {isLoading ? (
           <LoadingImage loaderImageCount={1} />
         ) : (
@@ -41,7 +41,7 @@ export const RandomDogs: React.FC<Props> = ({ dogsData }) => {
             imageSrc={randomDogsData as string}
           />
         )}
-      </div>
+      </article>
       <Button
         btnLabel={t('generateRandomImage')}
         ariaLabel="show more dogs button"

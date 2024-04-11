@@ -19,7 +19,7 @@ export const Header: React.FC<Props> = ({
   altText,
 }) => {
   return (
-    <div className="header-container">
+    <section className="header-container">
       {imgSrc && (
         <Image
           src={imgSrc}
@@ -30,15 +30,15 @@ export const Header: React.FC<Props> = ({
         />
       )}
       <Tooltip text={`${tooltipText}`}>
-        <div
+        <header
           className="header-label"
           aria-label={`Header with text ${headerText}`}
           data-testid="header-text"
         >
           {headerText}
-        </div>
+        </header>
       </Tooltip>
-      {children && <div>{children}</div>}
-    </div>
+      {children && <main>{children}</main>}
+    </section>
   );
 };

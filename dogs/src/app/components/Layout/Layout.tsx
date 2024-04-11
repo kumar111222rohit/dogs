@@ -8,10 +8,10 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div className="dashboard-container">
+      <main className="dashboard-container">
         <Header imgSrc="/static/assets/nowatch-logo.svg" />
-        <div className="content-container">{children}</div>
-      </div>
+        <article className="content-container">{children}</article>
+      </main>
     </>
   );
 };

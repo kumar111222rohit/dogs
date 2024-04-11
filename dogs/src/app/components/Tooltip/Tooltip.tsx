@@ -22,14 +22,14 @@ export const Tooltip: React.FC<TooltipProps> = ({ children, text }) => {
   }, [isVisible]);
 
   return (
-    <div
+    <section
       className="tooltip-container"
       ref={tooltipRef}
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >
       {children}
-      {isVisible && <div className="tooltip-content">{text}</div>}
-    </div>
+      {isVisible && <p className="tooltip-content">{text}</p>}
+    </section>
   );
 };

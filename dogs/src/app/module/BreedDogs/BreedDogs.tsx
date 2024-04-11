@@ -53,24 +53,24 @@ export const BreedDogs: React.FC<Props> = ({ dogBreed }) => {
   }, []);
   return (
     <>
-      <div className="dogs-wrapper">
-        <div className="header-text">{dogBreed}</div>
+      <article className="dogs-wrapper">
+        <header className="header-text">{dogBreed}</header>
         {dogsData.length ? (
           <>
-            <div className="dogs-container">{renderDogs(dogsData)}</div>
-            <div>
+            <section className="dogs-container">{renderDogs(dogsData)}</section>
+            <section>
               <Button
                 btnLabel={t('showMore')}
                 ariaLabel="show more dogs button"
                 onClick={handleClick}
               />
-            </div>
+            </section>
           </>
         ) : (
-          <div className="not-found">{t('noDogsFound')}</div>
+          <p className="not-found">{t('noDogsFound')}</p>
         )}
         {isLoading && <LoadingImage />}
-      </div>
+      </article>
     </>
   );
 };
