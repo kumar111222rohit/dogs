@@ -13,7 +13,7 @@ interface Props {
 const Dogs: React.FC<Props> = ({ dogs }) => {
   return (
     <Layout>
-      <RandomDogs dogsData={dogs} />
+      <RandomDogs dogsData={dogs.message} />
     </Layout>
   );
 };

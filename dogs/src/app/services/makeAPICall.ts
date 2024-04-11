@@ -1,7 +1,6 @@
 "use client";
 import { BASE_URL } from "../constants/genericConstants";
 import { RequestMethod, RequestOptions } from "../types/apiTypes";
-import { generateErrorResponse } from "../utils/helper";
 import { toast } from "react-toastify";
 
 const apiHost = BASE_URL;
@@ -16,7 +15,7 @@ async function request(
   try {
     const response = await fetch(apiHost + url, options);
     const data = await response.json();
-    
+
     if (data.code === 404) {
       toast.warning(data.message, { autoClose: 2000 });
       return [];
@@ -34,5 +33,5 @@ const get = (url: string): Promise<any> => {
 };
 
 export default {
-  get,
+  get
 };

@@ -1,11 +1,15 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+
 import { Button } from "./components/Button/Button";
-import "./globals.css";
 import { Header } from "./components/Header/Header";
 
+import "./globals.css";
+import { useTranslation } from "react-i18next";
+
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <Header
@@ -14,7 +18,7 @@ export default function Home() {
       />
       <Link href="/dogs">
         <div className="home-page-btn">
-          <Button btnLabel="Click to view assignment" />
+          <Button btnLabel={t("clickToViewAssignment")} />
         </div>
       </Link>
     </>

@@ -24,3 +24,8 @@
 .loader-wrapper {
   display: flex;
 }
+@media (max-width: 768px) {
+  .loader-wrapper {
+    flex-direction: column;
+  }
+}
