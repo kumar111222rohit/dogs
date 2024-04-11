@@ -6,6 +6,7 @@ interface Props {
 }
 const LoadingImage: React.FC<Props> = ({ loaderImageCount = 3 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  // we would show the number of shimmer elements as per the props passed
   const shimmerElements = [];
   for (let i = 0; i < loaderImageCount; i++) {
     const element = <div className="shimmer"></div>;

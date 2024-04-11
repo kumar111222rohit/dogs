@@ -19,6 +19,7 @@ const Dogs: React.FC<Props> = ({ dogs }) => {
 
 export async function getServerSideProps() {
   try {
+    // load a random dog while server side rendering
     const url = BASE_URL + API_ROUTES.RANDOM_BREEDS;
     const res = await fetch(url);
     const dogs = await res.json();
