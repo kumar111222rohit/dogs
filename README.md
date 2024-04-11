@@ -2,6 +2,7 @@
 
 This Next.js application provides a simple UI to play around with dogs images. 
 You can see either random dog image or dogs by breed
+
 ```/dogs```
 
 ```/dogs/breed/[breedname]```
