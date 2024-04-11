@@ -3,17 +3,19 @@ import { render, screen } from '@testing-library/react';
 import { Card } from './Card';
 
 describe('Card Component', () => {
-  const labelText = 'Husky';
-  const imageSrc='https://dog.ceo/api/breeds/image/random/3';
+  const labelText = 'Golden Retriever';
 
-  test('shoudl render Card  with props as passed', () => {
-    render(<Card labelText={headerText} imageSrc={imageSrc} />);
+  beforeEach(() => {
+    render(<Card labelText={labelText} imageSrc="" />);
+  });
 
-    expect(screen.getByText(headerText)).toBeInTheDocument();
+  it('renders the image with the correct  alt text', () => {
+    const image = screen.getByRole('img');
+    expect(image).toHaveAttribute('alt', labelText);
+  });
 
-    Object.entries(cardContents).forEach(([key, value]) => {
-      expect(screen.getByText(key)).toBeInTheDocument();
-      expect(screen.getByText(value)).toBeInTheDocument();
-    });
+  it('displays the correct label text', () => {
+    const label = screen.getByText(labelText);
+    expect(label).toBeInTheDocument();
   });
 });

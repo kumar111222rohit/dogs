@@ -1,6 +1,7 @@
+'use client';
 import { BASE_URL } from '../constants/genericConstants';
-import {  RequestMethod, RequestOptions } from '../types/apiTypes';
-import { generateErrorResponse } from '../utils/helper';
+import { RequestMethod, RequestOptions } from '../types/apiTypes';
+import { toast } from 'react-toastify';
 
 const apiHost = BASE_URL;
 
@@ -10,27 +11,20 @@ async function request(
 ): Promise<any> {
   const options: RequestOptions = {
     method,
-    headers: {
-      'Content-Type': 'application/json',
-    },
   };
-
   try {
     const response = await fetch(apiHost + url, options);
-
-    if (response.status !== 200) {
-      return generateErrorResponse(
-        'The server responded with an unexpected status.'
-      );
-    }
-
     const data = await response.json();
-    
 
+    if (data.code === 404) {
+      toast.warning(data.message, { autoClose: 2000 });
+      return [];
+    }
+    toast.success('Dogs data loaded', { autoClose: 2000 });
     return data;
-  } catch (e) {
-    console.log(e);
-    // we can show error in some toast notifation can log in some logger as well here
+  } catch (err) {
+    console.log(err);
+    toast.error(`Unable to load dogs data because ${err}`);
   }
 }
 
@@ -38,8 +32,6 @@ const get = (url: string): Promise<any> => {
   return request(url, 'GET');
 };
 
-
-
 export default {
-  get
+  get,
 };

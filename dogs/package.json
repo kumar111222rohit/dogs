@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "jest",
-    "precommit": "npm run lint && npm run format:check && npm test"
+    "precommit": "npm run lint && npm run format:check && npm run test"
   },
   "husky": {
     "hooks": {
@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
-    "@tanstack/react-query": "^5.28.4",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
@@ -28,8 +27,8 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@testing-library/jest-dom": "^6.4.2",
@@ -41,6 +40,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
+    "babel-jest": "^29.7.0",
     "classnames": "^2.5.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
@@ -53,7 +53,8 @@
     "next-i18next": "^15.2.0",
     "prettier": "^3.2.5",
     "react-i18next": "^14.1.0",
-    "redux-mock-store": "^1.5.4",
+    "react-toastify": "^10.0.5",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }

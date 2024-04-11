@@ -1,14 +1,15 @@
-import {
-  generateErrorResponse,
-} from './helper';
+import { getBreedName } from './helper';
 
+describe('getBreedName', () => {
+  it('should extract the breed name from a well-formed URL', () => {
+    const url = 'https://dog.ceo/breeds/hound-afghan/3';
+    const breedName = getBreedName(url);
+    expect(breedName).toEqual('hound-afghan');
+  });
 
-describe('generateErrorResponse', () => {
-  it('should create error response object', () => {
-    const message = 'Error occurred';
-    const result = generateErrorResponse(message);
-    expect(result).toEqual({ status: 'error', message });
+  it('should handle URLs without a trailing slash after the breed name', () => {
+    const url = 'https://dog.ceo/breeds/labrador';
+    const breedName = getBreedName(url);
+    expect(breedName).toEqual('labrador');
   });
 });
-
-

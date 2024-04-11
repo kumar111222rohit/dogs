@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
-import "./Card.css";
-import { Tooltip } from "../Tooltip/Tooltip";
+import './Card.css';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 interface Props {
   labelText: string;
@@ -13,7 +13,7 @@ export const Card: React.FC<Props> = ({ labelText, imageSrc }) => {
     <>
       <div className="card-wrapper">
         <div className="card-content">
-          <Image src={imageSrc} width={250} height={250} alt="labelText" />
+          <Image src={imageSrc} width={250} height={250} alt={labelText} />
         </div>
         <Tooltip text={`Dog breed is ${labelText}`}>
           <div className="card-label" aria-label={`${labelText}`}>

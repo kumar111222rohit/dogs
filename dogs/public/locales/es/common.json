@@ -1,1 +1,6 @@
-{}
+{
+  "noDogsFound": "¡Ups! No se encontraron perros para la raza.",
+  "showMore": "Mostrar más",
+  "generateRandomImage": "Generar imagen aleatoria de perro",
+  "clickToViewAssignment": "Hacer clic para ver la tarea"
+}

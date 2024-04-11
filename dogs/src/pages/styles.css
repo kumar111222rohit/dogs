@@ -17,7 +17,8 @@ body {
   border: 1px solid #e1e1e1;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: auto;
+
+  width: fit-content;
   margin: 20px;
   transition:
     transform 0.3s ease,
@@ -32,4 +33,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
 }
