@@ -61,6 +61,7 @@ To run tests, run the following command
 - Built on Next.js
 - Responsive for mobile and desktop
 - Accessibility: Built with WCAG support for inclusive user experience.
+- Semantic HTML
 
 - Type Safety: Ensured by TypeScript for enhanced code maintainability.
 
